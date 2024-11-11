@@ -6,9 +6,9 @@ games_raw as (
         date,
         home_club_id,
         away_club_id,
-        home_club_goal,
-        away_club_goal
-    from {{ source{'football_analytics_sources', 'games'}}}
+        home_club_goals,
+        away_club_goals
+    from {{ source('football_analytics_sources', 'games')}}
 )
 
 select *
