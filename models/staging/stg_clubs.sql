@@ -4,7 +4,7 @@ clubs_raw as (
         club_id,
         club_code,
         name
-    from {{ source{"football_analytics_sources", "clubs"}}}
+    from {{ source("football_analytics_sources", "clubs")}}
 )
 
 select *

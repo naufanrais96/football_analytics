@@ -2,7 +2,7 @@ version: 2
 
 sources:
   - name: football_analytics_sources
-    database: football_analytics
+    database: dbt-project-417804
     schema: football_analytics
     tables:
       - name: players

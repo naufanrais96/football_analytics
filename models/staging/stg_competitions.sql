@@ -5,7 +5,7 @@ competitions_raw as (
         competition_code,
         name,
         type
-    from {{ source{'football_analytics_sources', 'competitions'}}}
+    from {{ source("football_analytics_sources", "competitions")}}
 )
 
 select *

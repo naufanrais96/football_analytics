@@ -4,8 +4,8 @@ with players_raw as (
         name,
         current_club_id,
         position,
-        sub_position,
-    from {{ source{"football_analytics_sources", "players"}}}
+        sub_position
+    from {{ source('football_analytics_sources', 'players')}}
 )
 
 select *

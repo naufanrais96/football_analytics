@@ -33,7 +33,7 @@ select distinct
   market_update_date latest_market_update_date,
   market_value,
   rank() over(order by market_value desc) rn_market_value,
-  market_value - market_value_prev,
+  market_value - market_value_prev market_value_changes,
   rank() over(order by market_value - market_value_prev desc) rn_market_value_changes
 from players c
 join valuation_changes a using(player_id)

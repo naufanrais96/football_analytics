@@ -8,7 +8,7 @@ transfers_raw as (
         to_club_id,
         transfer_fee,
         market_value_in_eur
-    from {{ source{'football_analytics_sources', 'transfers'}}}
+    from {{ source('football_analytics_sources', 'transfers')}}
 )
 
 select *
